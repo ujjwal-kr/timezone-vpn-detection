@@ -1,4 +1,5 @@
 const deviceWidth = screen.availWidth;
+document.querySelector('.VPN').textContent = `Please Wait............`;
 if (deviceWidth > 990) {
     const vpnData = {
         timezone: data.timezone
@@ -21,9 +22,11 @@ if (deviceWidth > 990) {
     }
     if (diff > 50000) {
         console.log("YAY VPN")
-        document.querySelector('.VPN').textContent = `You ARE using a VPN`
+        document.querySelector('.VPN').textContent = `You ARE using a VPN`;
     } else {
-        console.log("NO VPN")
-        document.querySelector('.VPN').textContent = `You donot seem to Use a VPN`
+        console.log("NO VPN");
+        document.querySelector('.VPN').textContent = `You donot seem to Use a VPN`;
     }
+} else {
+    document.querySelector('.VPN').textContent = `This feature is not available on mobile phones lol... So yeah.`;
 }
